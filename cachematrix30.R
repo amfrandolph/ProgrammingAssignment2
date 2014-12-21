@@ -12,13 +12,14 @@
 matt <- matrix(1:4,2)  # save practice matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-        yr <- NULL    # resets inverse return value
+        yr <- NULL    # resets invers return value
         set <- function(y) {      # function to super assign original matrix and inverse
                 xg <<- x
-                yr <<- NULL      
+                yr <<- "10"  
+                
         }  
         get <- function() x   # read orignal Value
-        setinverse <- function(yg) yr <<- yg  # funtion to super assign inverse matrix
+        setinverse <- function(yr) yg <<- yr  # funtion to super assign inverse matrix
         getinverse <- function() yr     # funtion to retrieve super assigned matrix
         list(set=set, get=get,   #  Tells wher to find functions
              setinverse = setinverse,
